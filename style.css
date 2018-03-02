@@ -1,11 +1,43 @@
+body{
+    background-image: url("assets/lawn.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.container{
+    width: 100vw;
+    height: 100vh;
+}
+.row{
+    height: 33%;
+    text-align: center;
+}
+.column{
+    height: 100%;
+    width: 30%;
+    display: inline-block;
+    position: relative;
+    text-align: center;
+    margin: auto;
+}
+.dirtpile{
+    height: 80%;
+    position: relative;
+    margin: auto;
+    top: 20%;
+}
+.mole{
+    height: 70%;
+    position: absolute;
+    z-index: -1;
+    top: 30%;
+    left: 34%;
+    transition-duration: .5s;
+}
+
 .noTouch {
     pointer-events: none;
 }
 
 .moveUp {
     transform: translateY(-10%);
-}
-
-.mole {
-    transition-duration: .5s;
 }
