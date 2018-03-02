@@ -26,8 +26,9 @@ class MoleGame {
     }
 }
 function applyClickHandlers(){
-
+    $('.moleMover').click(whackMole.moveMoles);
 }
+
 function moleWasWhacked(){
     $(this).addClass('noTouch');
     $('.statsNumber').text(parseInt($('.statsNumber').text())+1);
