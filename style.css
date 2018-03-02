@@ -1,0 +1,11 @@
+.noTouch {
+    pointer-events: none;
+}
+
+.moveUp {
+    transform: translateY(-10%);
+}
+
+.mole {
+    transition-duration: .5s;
+}
