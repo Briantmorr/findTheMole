@@ -3,6 +3,7 @@ body{
     background-repeat: no-repeat;
     background-size: cover;
     margin: 0;
+    font-family: Arial;
 }
 .container{
     width: 100vw;
