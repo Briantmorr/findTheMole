@@ -30,12 +30,12 @@ class MoleGame {
 }
 function applyClickHandlers(){
     $('.mole').click(moleWasWhacked);
-    $('.moleMover').click(whackMole.moveMoles);
+    $('.moleMover').click(startGame);
 }
 
 function createMoles(){
     for(var i = 1; i <= 9; i++){
-        var mole = $('.mole' + i)
+        var mole = $('.mole' + i);
         moles.push(mole);
     }
 }
@@ -50,15 +50,21 @@ function moleWasWhacked(){
 
 
 function timerStart(){
-    setInterval()
-
+    var timerStartStop = setInterval(updateTime,1000);
+    setTimeout(clearInterval.bind(null, timerStartStop),20000);
 }
 
 function updateTime(){
+    console.log("We are running our set interval");
     var timer = $('.timeLeft');
     var currentTime = parseInt(timer.text());
     currentTime = currentTime - 1;
     timer.text(currentTime);
 
+}
+
+function startGame(){
+    timerStart();
+    whackMole.moveMoles();
 }
 
