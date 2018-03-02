@@ -27,11 +27,9 @@ class MoleGame {
 }
 function applyClickHandlers(){
     $('.mole').click(molesWacked);
+    $('.moleMover').click(whackMole.moveMoles);
 }
-<<<<<<< HEAD
 
-
-=======
 function moleWasWhacked(){
     $(this).addClass('noTouch');
     $('.statsNumber').text(parseInt($('.statsNumber').text())+1);
@@ -39,4 +37,4 @@ function moleWasWhacked(){
     squeak.src = 'assets/squeak.mp3';
     squeak.play();
 }
->>>>>>> 95f88acb7be3b800b6ec819832cfbbeb3a0d8709
+
