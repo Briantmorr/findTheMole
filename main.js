@@ -1,33 +1,43 @@
 $(document).ready(initializeApp);
 var whackMole = null;
 var moles = [];
-for(var i = 1; i <= 9; i++){
-    var mole = $('.mole' + i);
-    moles.push(mole);
-}
+
 function initializeApp() {
     whackMole = new MoleGame(moles);
     applyClickHandlers();
+    createMoles();
 }
 
 class MoleGame {
-    constructor(moles){
+    constructor(moles) {
         this.moleArray = [];
         this.moleArray = moles;
+        this.randomTimes = [1000, 2000, 3000];
     }
-    moveMoles(){
-        var aRandomMole = this.getRandomMole();
+    moveMoles() {
         setInterval(function () {
-            moveMole(moles[aRandomMole], 1000)
+            var randomMole = whackMole.getRandomMole();
+            var randomTime = whackMole.randomTimes[Math.floor(Math.random() * 3)];
+            console.log(randomTime);
+            moveMole(moles[randomMole], 1000);
         }, 2000);
     }
-    getRandomMole(){
-    return 1;
+    getRandomMole() {
+        var results = Math.floor(Math.random() * 7);
+        var totalNum = results;
+        return totalNum;
     }
 }
 function applyClickHandlers(){
-    $('.mole').click(molesWacked);
+    $('.mole').click(moleWasWhacked);
     $('.moleMover').click(whackMole.moveMoles);
+}
+
+function createMoles(){
+    for(var i = 1; i <= 9; i++){
+        var mole = $('.mole' + i)
+        moles.push(mole);
+    }
 }
 
 function moleWasWhacked(){
@@ -37,6 +47,7 @@ function moleWasWhacked(){
     squeak.src = 'assets/squeak.mp3';
     squeak.play();
 }
+
 
 function timerStart(){
     setInterval()
@@ -50,3 +61,4 @@ function updateTime(){
     timer.text(currentTime);
 
 }
+
