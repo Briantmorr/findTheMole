@@ -26,5 +26,7 @@ class MoleGame {
     }
 }
 function applyClickHandlers(){
-
+    $('.mole').click(molesWacked);
 }
+
+
