@@ -34,7 +34,7 @@ function applyClickHandlers(){
 
 function createMoles(){
     for(var i = 1; i <= 9; i++){
-        var mole = $('.mole' + i)
+        var mole = $('.mole' + i);
         moles.push(mole);
     }
 }
