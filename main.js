@@ -33,7 +33,7 @@ class MoleGame {
 }
 function applyClickHandlers(){
     $('.mole').click(moleWasWhacked);
-    $('.moleMover').click(whackMole.moveMoles);
+    $('.moleMover').click(startGame);
 }
 
 function createMoles(){
@@ -58,14 +58,24 @@ function winScreen(){
     $('#molesWhacked').text(molesWhacked);
 }
 function timerStart(){
-    setInterval()
-
+    var timerStartStop = setInterval(updateTime,1000);
+    setTimeout(clearInterval.bind(null, timerStartStop),20000);
 }
 
 function updateTime(){
+    console.log("We are running our set interval");
     var timer = $('.timeLeft');
     var currentTime = parseInt(timer.text());
     currentTime = currentTime - 1;
     timer.text(currentTime);
 
 }
+<<<<<<< HEAD
+
+function startGame(){
+    timerStart();
+    whackMole.moveMoles();
+}
+
+=======
+>>>>>>> ef9cf44bac3ed46171735fbd6bbd8c05a7468487
