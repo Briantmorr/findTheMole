@@ -13,7 +13,7 @@ body{
 }
 .column{
     height: 100%;
-    width: 30%;
+    width: 25%;
     display: inline-block;
     position: relative;
     text-align: center;
@@ -33,11 +33,22 @@ body{
     left: 34%;
     transition-duration: .5s;
 }
-
+.moleMover{
+    position: absolute;
+    top: 5%;
+    left: 90%;
+}
+.statsHead{
+    position: absolute;
+    top: 2%;
+    left: 2%;
+    width: 10%;
+    color: white;
+}
 .noTouch {
     pointer-events: none;
 }
-
 .moveUp {
     transform: translateY(-10%);
 }
+
