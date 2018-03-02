@@ -70,12 +70,10 @@ function updateTime(){
     timer.text(currentTime);
 
 }
-<<<<<<< HEAD
+
 
 function startGame(){
     timerStart();
     whackMole.moveMoles();
 }
 
-=======
->>>>>>> ef9cf44bac3ed46171735fbd6bbd8c05a7468487
