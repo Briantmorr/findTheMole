@@ -13,7 +13,7 @@ body{
 }
 .column{
     height: 100%;
-    width: 30%;
+    width: 25%;
     display: inline-block;
     position: relative;
     text-align: center;
@@ -31,4 +31,16 @@ body{
     z-index: -1;
     top: 30%;
     left: 34%;
+}
+.moleMover{
+    position: absolute;
+    top: 5%;
+    left: 90%;
+}
+.statsHead{
+    position: absolute;
+    top: 2%;
+    left: 2%;
+    width: 10%;
+    color: white;
 }
