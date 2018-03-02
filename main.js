@@ -13,9 +13,10 @@ class MoleGame {
         this.moleArray = [];
         this.moleArray = moles;
         this.randomTimes = [1000, 2000, 3000];
+        this.moleTimer = null;
     }
     moveMoles() {
-        setInterval(function () {
+            this.moleTimer = setInterval(function () {
             var randomMole = whackMole.getRandomMole();
             var randomTime = whackMole.randomTimes[Math.floor(Math.random() * 3)];
             moveMole(moles[randomMole], randomTime);
@@ -25,6 +26,9 @@ class MoleGame {
         var results = Math.floor(Math.random() * 7);
         var totalNum = results;
         return totalNum;
+    }
+    stopMoles(){
+    clearInterval(whackMole.moleTimer);
     }
 }
 function applyClickHandlers(){
@@ -45,4 +49,10 @@ function moleWasWhacked(){
     var squeak = new Audio();
     squeak.src = 'assets/squeak.mp3';
     squeak.play();
+}
+
+function winScreen(){
+    $('#id01').css({
+        display:'block'
+    })
 }
