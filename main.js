@@ -38,3 +38,15 @@ function moleWasWhacked(){
     squeak.play();
 }
 
+function timerStart(){
+    setInterval()
+
+}
+
+function updateTime(){
+    var timer = $('.timeLeft');
+    var currentTime = parseInt(timer.text());
+    currentTime = currentTime - 1;
+    timer.text(currentTime);
+
+}
