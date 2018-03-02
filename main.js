@@ -38,7 +38,7 @@ function applyClickHandlers(){
 
 function createMoles(){
     for(var i = 1; i <= 9; i++){
-        var mole = $('.mole' + i)
+        var mole = $('.mole' + i);
         moles.push(mole);
     }
 }
@@ -46,13 +46,24 @@ function createMoles(){
 function moleWasWhacked(){
     $(this).addClass('noTouch');
     $('.statsNumber').text(parseInt($('.statsNumber').text())+1);
-    var squeak = new Audio();
-    squeak.src = 'assets/squeak.mp3';
-    squeak.play();
+    var whack = new Audio();
+    whack.src = 'assets/whack.mp3';
+    whack.play();
 }
-
 function winScreen(){
     $('#id01').css({
         display:'block'
     })
+}
+function timerStart(){
+    setInterval()
+
+}
+
+function updateTime(){
+    var timer = $('.timeLeft');
+    var currentTime = parseInt(timer.text());
+    currentTime = currentTime - 1;
+    timer.text(currentTime);
+
 }
