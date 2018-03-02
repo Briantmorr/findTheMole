@@ -63,3 +63,16 @@ body{
     transform: translateY(-40%);
 }
 
+.timerDisplay {
+    position: absolute;
+    left: 2%;
+    bottom: 15%;
+    color: white;
+}
+
+.timeLeft {
+    position: absolute;
+    left: 2%;
+    bottom: 10%;
+    color: white;
+}

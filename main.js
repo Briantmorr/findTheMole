@@ -17,7 +17,8 @@ class MoleGame {
     moveMoles() {
         setInterval(function () {
             var randomMole = whackMole.getRandomMole();
-
+            var randomTime = whackMole.randomTimes[Math.floor(Math.random() * 3)];
+            console.log(randomTime);
             moveMole(moles[randomMole], 1000);
         }, 2000);
     }
@@ -46,3 +47,18 @@ function moleWasWhacked(){
     squeak.src = 'assets/squeak.mp3';
     squeak.play();
 }
+
+
+function timerStart(){
+    setInterval()
+
+}
+
+function updateTime(){
+    var timer = $('.timeLeft');
+    var currentTime = parseInt(timer.text());
+    currentTime = currentTime - 1;
+    timer.text(currentTime);
+
+}
+
