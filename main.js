@@ -29,7 +29,7 @@ class MoleGame {
     }
 }
 function applyClickHandlers(){
-    $('.mole').click(molesWacked);
+    $('.mole').click(moleWasWhacked);
     $('.moleMover').click(whackMole.moveMoles);
 }
 
