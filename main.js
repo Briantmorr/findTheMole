@@ -28,3 +28,10 @@ class MoleGame {
 function applyClickHandlers(){
 
 }
+function moleWasWhacked(){
+    $(this).addClass('noTouch');
+    $('.statsNumber').text(parseInt($('.statsNumber').text())+1);
+    var squeak = new Audio();
+    squeak.src = 'assets/squeak.mp3';
+    squeak.play();
+}
