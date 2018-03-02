@@ -26,7 +26,7 @@ body{
     height: 80%;
     position: relative;
     margin: auto;
-    top: 20%;
+    top: 25%;
 }
 .mole{
     height: 70%;
@@ -46,6 +46,12 @@ body{
     top: 2%;
     left: 2%;
     width: 10%;
+    color: white;
+}
+.statsNumber{
+    position: absolute;
+    top: 13%;
+    left: 2%;
     color: white;
 }
 .noTouch {

@@ -12,10 +12,12 @@ class MoleGame {
     constructor(moles) {
         this.moleArray = [];
         this.moleArray = moles;
+        this.randomTimes = [1000, 2000, 3000];
     }
     moveMoles() {
         setInterval(function () {
             var randomMole = whackMole.getRandomMole();
+
             moveMole(moles[randomMole], 1000);
         }, 2000);
     }
@@ -26,8 +28,9 @@ class MoleGame {
     }
 }
 function applyClickHandlers(){
-
+    $('.moleMover').click(whackMole.moveMoles);
 }
+
 function createMoles(){
     for(var i = 1; i <= 9; i++){
         var mole = $('.mole' + i)
@@ -35,3 +38,10 @@ function createMoles(){
     }
 }
 
+function moleWasWhacked(){
+    $(this).addClass('noTouch');
+    $('.statsNumber').text(parseInt($('.statsNumber').text())+1);
+    var squeak = new Audio();
+    squeak.src = 'assets/squeak.mp3';
+    squeak.play();
+}
