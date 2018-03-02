@@ -17,7 +17,8 @@ class MoleGame {
     moveMoles() {
         setInterval(function () {
             var randomMole = whackMole.getRandomMole();
-
+            var randomTime = whackMole.randomTimes[Math.floor(Math.random() * 3)];
+            console.log(randomTime);
             moveMole(moles[randomMole], 1000);
         }, 2000);
     }
