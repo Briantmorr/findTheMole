@@ -54,6 +54,8 @@ function winScreen(){
     $('#id01').css({
         display:'block'
     })
+    var molesWhacked = $('.statsNumber').text();
+    $('#molesWhacked').text(molesWhacked);
 }
 function timerStart(){
     setInterval()
