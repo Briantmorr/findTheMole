@@ -31,6 +31,7 @@ body{
     z-index: -1;
     top: 30%;
     left: 34%;
+    transition-duration: .5s;
 }
 .moleMover{
     position: absolute;
@@ -44,3 +45,10 @@ body{
     width: 10%;
     color: white;
 }
+.noTouch {
+    pointer-events: none;
+}
+.moveUp {
+    transform: translateY(-10%);
+}
+
