@@ -1,7 +1,7 @@
 $(document).ready(initializeApp);
 var whackMole = null;
 var moles = [];
-for(var i = 0; i < 9; i++){
+for(var i = 1; i <= 9; i++){
     var mole = $('.mole' + i);
     moles.push(mole);
 }
@@ -12,12 +12,13 @@ function initializeApp() {
 
 class MoleGame {
     constructor(moles){
-        this.moleArray = moles
+        this.moleArray = [];
+        this.moleArray = moles;
     }
     moveMoles(){
         var aRandomMole = this.getRandomMole();
         setInterval(function () {
-            moveMole(this.moleArray[aRandomMole], 1000)
+            moveMole(moles[aRandomMole], 1000)
         }, 2000);
     }
     getRandomMole(){
