@@ -52,6 +52,6 @@ body{
     pointer-events: none;
 }
 .moveUp {
-    transform: translateY(-10%);
+    transform: translateY(-40%);
 }
 
