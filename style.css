@@ -27,14 +27,16 @@ body{
     position: relative;
     margin: auto;
     top: 25%;
+    z-index: 3;
 }
 .mole{
     height: 70%;
     position: absolute;
-    z-index: -1;
     top: 30%;
     left: 34%;
     transition-duration: .5s;
+    z-index: 2;
+    cursor: pointer;
 }
 .moleMover{
     position: absolute;
@@ -60,6 +62,16 @@ body{
 .moveUp {
     transform: translateY(-40%);
 }
+
+
+.winModal{
+    background-color:blue;
+    text-align:center;
+
+}
+.modalBody{
+    height:200px;
+    text-align:center;
 
 .timerDisplay {
     position: absolute;

@@ -13,19 +13,22 @@ class MoleGame {
         this.moleArray = [];
         this.moleArray = moles;
         this.randomTimes = [1000, 2000, 3000];
+        this.moleTimer = null;
     }
     moveMoles() {
-        setInterval(function () {
+            this.moleTimer = setInterval(function () {
             var randomMole = whackMole.getRandomMole();
             var randomTime = whackMole.randomTimes[Math.floor(Math.random() * 3)];
-            console.log(randomTime);
-            moveMole(moles[randomMole], 1000);
-        }, 2000);
+            moveMole(moles[randomMole], randomTime);
+        }, 900);
     }
     getRandomMole() {
         var results = Math.floor(Math.random() * 7);
         var totalNum = results;
         return totalNum;
+    }
+    stopMoles(){
+    clearInterval(whackMole.moleTimer);
     }
 }
 function applyClickHandlers(){
@@ -43,12 +46,15 @@ function createMoles(){
 function moleWasWhacked(){
     $(this).addClass('noTouch');
     $('.statsNumber').text(parseInt($('.statsNumber').text())+1);
-    var squeak = new Audio();
-    squeak.src = 'assets/squeak.mp3';
-    squeak.play();
+    var whack = new Audio();
+    whack.src = 'assets/whack.mp3';
+    whack.play();
 }
-
-
+function winScreen(){
+    $('#id01').css({
+        display:'block'
+    })
+}
 function timerStart(){
     var timerStartStop = setInterval(updateTime,1000);
     setTimeout(clearInterval.bind(null, timerStartStop),20000);
@@ -62,9 +68,12 @@ function updateTime(){
     timer.text(currentTime);
 
 }
+<<<<<<< HEAD
 
 function startGame(){
     timerStart();
     whackMole.moveMoles();
 }
 
+=======
+>>>>>>> ef9cf44bac3ed46171735fbd6bbd8c05a7468487

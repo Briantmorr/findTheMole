@@ -7,6 +7,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Find the Mole!</title>
     <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
     <script src="moveMole.js"></script>
 
@@ -64,5 +66,18 @@
             <h2 class="timeLeft">20</h2>
         </aside>
     </main>
+    <div id="id01" class="w3-modal" style="display:none">
+        <div class="w3-modal-content w3-animate-top w3-card-4 ">
+            <header class="w3-container winModal">
+        <span onclick="document.getElementById('id01').style.display='none'"
+              class="w3-button w3-display-topright">&times;</span>
+                <h2>GOOD JOB!!!</h2>
+            </header>
+            <div class="w3-container modalBody">
+                <p>you whacked <span>0</span> Moles!</p>
+
+            </div>
+        </div>
+    </div>
 </body>
 </html>
