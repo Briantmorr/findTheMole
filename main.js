@@ -28,5 +28,15 @@ class MoleGame {
 function applyClickHandlers(){
     $('.mole').click(molesWacked);
 }
+<<<<<<< HEAD
 
 
+=======
+function moleWasWhacked(){
+    $(this).addClass('noTouch');
+    $('.statsNumber').text(parseInt($('.statsNumber').text())+1);
+    var squeak = new Audio();
+    squeak.src = 'assets/squeak.mp3';
+    squeak.play();
+}
+>>>>>>> 95f88acb7be3b800b6ec819832cfbbeb3a0d8709

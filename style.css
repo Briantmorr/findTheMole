@@ -48,6 +48,12 @@ body{
     width: 10%;
     color: white;
 }
+.statsNumber{
+    position: absolute;
+    top: 13%;
+    left: 2%;
+    color: white;
+}
 .noTouch {
     pointer-events: none;
 }
