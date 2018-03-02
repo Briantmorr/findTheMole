@@ -1,3 +1,8 @@
+body{
+    background-image: url("assets/lawn.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 .container{
     width: 100vw;
     height: 100vh;
@@ -26,4 +31,13 @@
     z-index: -1;
     top: 30%;
     left: 34%;
+    transition-duration: .5s;
+}
+
+.noTouch {
+    pointer-events: none;
+}
+
+.moveUp {
+    transform: translateY(-10%);
 }
