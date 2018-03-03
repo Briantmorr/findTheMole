@@ -28,6 +28,7 @@ body{
     margin: auto;
     top: 25%;
     z-index: 3;
+    user-select: none;
 }
 .mole{
     height: 70%;
@@ -52,7 +53,7 @@ body{
 }
 .statsNumber{
     position: absolute;
-    top: 13%;
+    top: 16%;
     left: 2%;
     color: white;
 }
@@ -69,20 +70,21 @@ body{
     text-align:center;
 
 }
-.modalBody{
-    height:200px;
-    text-align:center;
-
+.modalBody {
+    height: 200px;
+    text-align: center;
+}
 .timerDisplay {
+    width: 10%;
     position: absolute;
     left: 2%;
-    bottom: 15%;
+    top: 30%;
     color: white;
 }
 
 .timeLeft {
     position: absolute;
     left: 2%;
-    bottom: 10%;
+    top: 44%;
     color: white;
 }
