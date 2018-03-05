@@ -2,13 +2,16 @@ body{
     background-image: url("assets/lawn.jpg");
     background-repeat: no-repeat;
     background-size: cover;
+    margin: 0;
+    font-family: Arial;
 }
 .container{
     width: 100vw;
     height: 100vh;
 }
 .row{
-    height: 33%;
+    height: 30%;
+    width: 100%;
     text-align: center;
 }
 .column{
@@ -49,6 +52,6 @@ body{
     pointer-events: none;
 }
 .moveUp {
-    transform: translateY(-10%);
+    transform: translateY(-40%);
 }
 
